@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<html>
-  <body>
-      <p>
-        
-        <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -13,18 +8,17 @@ body{
     font-family: 'Georgia', serif;
     background: url('https://uploads.onecompiler.io/43vku9kwx/43xu8ctms/pola-mulus-dengan-bunga-melati.jpg') repeat center center fixed;
     background-size: auto;
-    color: #ffffff; /* teks putih */
+    color: #ffffff;
     margin: 0;
     padding: 0;
 }
 header{
-    background: rgba(0, 100, 0, 0.8); /* hijau tua transparan */
+    background: rgba(0, 100, 0, 0.8);
     padding: 20px;
     text-align: center;
     font-size: 22px;
     font-weight: bold;
-    border-bottom: 2px solid #2ecc71; /* hijau segar */
-    letter-spacing: 2px;
+    border-bottom: 2px solid #2ecc71;
     color: #ffffff;
 }
 nav{
@@ -33,40 +27,34 @@ nav{
     text-align: center;
 }
 nav a{
-    color: #2ecc71; /* hijau terang */
+    color: #2ecc71;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
 }
-nav a:hover{
-    text-decoration: underline;
-}
+nav a:hover{ text-decoration: underline; }
 section{
     padding: 40px;
     margin: 20px auto;
     max-width: 1100px;
-    background: rgba(0, 50, 0, 0.6); /* hijau gelap transparan */
+    background: rgba(0, 50, 0, 0.6);
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
-h1{
-    text-align: center;
-    color: #2ecc71; /* hijau segar */
-    margin-bottom: 30px;
-}
+h1{ text-align: center; color: #2ecc71; margin-bottom: 30px; }
 .grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 .card{
-    background: rgba(255, 255, 255, 0.9); /* putih transparan */
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 12px;
     text-align: center;
     border: 2px solid #2ecc71;
-    box-shadow: 0 15px rgba(0,0,0,0.7);
-    color: #006400; /* teks hijau tua */
+    color: #006400;
+    cursor: pointer;
 }
 .card img{
     width: 120px;
@@ -76,110 +64,177 @@ h1{
     margin-bottom: 15px;
     object-fit: cover;
 }
-.card h2{
-    margin: 10px 0 5px;
-    color: #006400; /* hijau tua */
+.card h2{ margin: 10px 0 5px; color: #006400; }
+
+/* === Modal === */
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
 }
-.card p{
-    margin: 5px;
-    font-size: 0.95em;
-    line-height: 1.4;
-    color: #004d00; /* hijau lebih gelap */
-}
-footer{
-    text-align: center;
+.modal-content{
+    background: #003300; /* hijau tua */
+    color: white;
+    margin: 5% auto;
     padding: 20px;
-    background: rgba(0, 100, 0, 0.8);
-    border-top: 2px solid #2ecc71;
-    color: #ffffff;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 20px #2ecc71;
 }
+.close{
+    color: white;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+.close:hover{ color: #2ecc71; }
 </style>
 </head>
 <body>
-<header>
-    Biodata Anggota Kelompok
-</header>
+<header>Biodata Anggota Kelompok</header>
 <nav>
-      <a href="index.html">Beranda</a>
-    <a href="alasan.html">Alasan</a>
-    <a href="biodata.html">Biodata Kelompok</a>
-    <a href="fakta unik.html">Fakta Unik</a>
-         <a href="sejarah.html">Sejarah</a>
+  <a href="#">Beranda</a>
+  <a href="#">Alasan</a>
+  <a href="#">Biodata</a>
+  <a href="#">Fakta Unik</a>
+  <a href="#">Sejarah</a>
 </nav>
 
 <section>
-    <h1>Profil Anggota Kelompok</h1>
-    <div class="grid">
-
-        <!-- Anggota 1 -->
-        <div class="card">
-            <img src="https://uploads.onecompiler.io/43vku9kwx/43vmfw67d/IMG_1073.JPG" alt="Foto Reivan">
-            <h2>Ahmad Ainul Barazikh</h2>
-            <p><b>Anggota 1</b></p>
-            <p><b>Alamat:</b> Mojopanggung</p>
-            <p><b>Asal:</b> Banyuwangi</p>
-            <p><b>Hobi:</b> Jalan-Jalan</p>
-        </div>
-
-        <!-- Anggota 2 -->
-        <div class="card">
-            <img src="https://uploads.onecompiler.io/43vku9kwx/43xqhfzw9/IMG-20250925-WA0007.jpg" alt="Foto Anggota 2">
-            <h2>Sera safitri</h2>
-            <p><b>Anggota 2</b></p>
-            <p><b>Alamat:</b> Tegaldlimo</p>
-            <p><b>Asal:</b> Banyuwangi</p>
-            <p><b>Hobi:</b> Memasak</p>
-        </div>
-
-        <!-- Anggota 3 -->
-        <div class="card">
-            <img src="https://uploads.onecompiler.io/43vku9kwx/43xu8ctms/IMG-20250926-WA0041.jpg" alt="Foto Anggota 3">
-            <h2>Qiwami Widhi Satoto</h2>
-            <p><b>Anggota 3</b></p>
-            <p><b>Alamat:</b> Bakungan</p>
-            <p><b>Asal:</b> Banyuwangi</p>
-            <p><b>Hobi:</b> Bermain game</p>
-        </div>
-
-        <!-- Anggota 4 -->
-        <div class="card">
-            <img src="https://uploads.onecompiler.io/43vku9kwx/43xuperjn/IMG-20250926-WA0039.jpg" alt="Foto Anggota 4">
-            <h2>Bhagas Ardhietama</h2>
-            <p><b>Anggota 4</b></p>
-            <p><b>Alamat:</b> Singotrunan</p>
-            <p><b>Asal:</b> Banyuwangi</p>
-            <p><b>Hobi:</b> olahraga</p>
-        </div>
-
-        <!-- Anggota 5 -->
-        <div class="card">
-            <img src="https://uploads.onecompiler.io/43vku9kwx/43xxzd8e3/IMG-20250927-WA0010.jpg" alt="Foto Anggota 5">
-            <h2>Mochamad Nathan Putra P</h2>
-            <p><b>Anggota 5</b></p>
-            <p><b>Alamat:</b> Gentengan</p>
-            <p><b>Asal:</b> Banyuwangi</p>
-            <p><b>Hobi:</b> bermain game</p>
-        </div>
-
-        <!-- Anggota 6 -->
-        <div class="card">
-            <img src="https://uploads.onecompiler.io/43vku9kwx/43xuperjn/IMG-20250926-WA0050.jpg" alt="Foto Anggota 6">
-            <h2>Clara Cahya Cantika</h2>
-            <p><b>Anggota 6</b></p>
-            <p><b>Alamat:</b> Cluring</p>
-            <p><b>Asal:</b> Banyuwangi</p>
-            <p><b>Hobi:</b> Mendengarkan Musik</p>
-        </div>
-
+  <h1>Profil Anggota Kelompok</h1>
+  <div class="grid">
+    
+    <!-- Anggota 1 -->
+    <div class="card" onclick="openModal('modal1')">
+      <img src="https://uploads.onecompiler.io/43vku9kwx/43vmfw67d/IMG_1073.JPG">
+      <h2>Ahmad Ainul Barazikh</h2>
+      <p>Anggota 1</p>
     </div>
+
+    <!-- Anggota 2 -->
+    <div class="card" onclick="openModal('modal2')">
+      <img src="https://uploads.onecompiler.io/43vku9kwx/43xqhfzw9/IMG-20250925-WA0007.jpg">
+      <h2>Sera Safitri</h2>
+      <p>Anggota 2</p>
+    </div>
+
+    <!-- Anggota 3 -->
+    <div class="card" onclick="openModal('modal3')">
+      <img src="https://uploads.onecompiler.io/43vku9kwx/43xu8ctms/IMG-20250926-WA0041.jpg">
+      <h2>Qiwami Widhi Satoto</h2>
+      <p>Anggota 3</p>
+    </div>
+
+    <!-- Anggota 4 -->
+    <div class="card" onclick="openModal('modal4')">
+      <img src="https://uploads.onecompiler.io/43vku9kwx/43xuperjn/IMG-20250926-WA0039.jpg">
+      <h2>Bhagas Ardhietama</h2>
+      <p>Anggota 4</p>
+    </div>
+
+    <!-- Anggota 5 -->
+    <div class="card" onclick="openModal('modal5')">
+      <img src="https://uploads.onecompiler.io/43vku9kwx/43xxzd8e3/IMG-20250927-WA0010.jpg">
+      <h2>Mochamad Nathan Putra P</h2>
+      <p>Anggota 5</p>
+    </div>
+
+    <!-- Anggota 6 -->
+    <div class="card" onclick="openModal('modal6')">
+      <img src="https://uploads.onecompiler.io/43vku9kwx/43xuperjn/IMG-20250926-WA0050.jpg">
+      <h2>Clara Cahya Cantika</h2>
+      <p>Anggota 6</p>
+    </div>
+
+  </div>
 </section>
 
-<footer>
-    &copy; 2025 Website Melati| Kelompok Informatika
-</footer>
+<!-- === MODAL BIODATA === -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <h2>Ahmad Ainul Barazikh</h2>
+    <p><b>TTL:</b> Banyuwangi, 2007</p>
+    <p><b>Alamat:</b> Mojopanggung</p>
+    <p><b>Hobi:</b> Jalan-Jalan</p>
+    <p><b>Cita-cita:</b> Programmer</p>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <h2>Sera Safitri</h2>
+    <p><b>TTL:</b> Banyuwangi, 2007</p>
+    <p><b>Alamat:</b> Tegaldlimo</p>
+    <p><b>Hobi:</b> Memasak</p>
+    <p><b>Cita-cita:</b> Dokter</p>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <h2>Qiwami Widhi Satoto</h2>
+    <p><b>TTL:</b> Banyuwangi, 2007</p>
+    <p><b>Alamat:</b> Bakungan</p>
+    <p><b>Hobi:</b> Bermain Game</p>
+    <p><b>Cita-cita:</b> Pilot</p>
+  </div>
+</div>
+
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal4')">&times;</span>
+    <h2>Bhagas Ardhietama</h2>
+    <p><b>TTL:</b> Banyuwangi, 2007</p>
+    <p><b>Alamat:</b> Singotrunan</p>
+    <p><b>Hobi:</b> Olahraga</p>
+    <p><b>Cita-cita:</b> Atlet</p>
+  </div>
+</div>
+
+<div id="modal5" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal5')">&times;</span>
+    <h2>Mochamad Nathan Putra P</h2>
+    <p><b>TTL:</b> Banyuwangi, 2007</p>
+    <p><b>Alamat:</b> Gentengan</p>
+    <p><b>Hobi:</b> Bermain Game</p>
+    <p><b>Cita-cita:</b> Tentara</p>
+  </div>
+</div>
+
+<div id="modal6" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal6')">&times;</span>
+    <h2>Clara Cahya Cantika</h2>
+    <p><b>TTL:</b> Banyuwangi, 2007</p>
+    <p><b>Alamat:</b> Cluring</p>
+    <p><b>Hobi:</b> Mendengarkan Musik</p>
+    <p><b>Cita-cita:</b> Perawat</p>
+  </div>
+</div>
+
+<footer>&copy; 2025 Website Melati | Kelompok Informatika</footer>
+
+<script>
+function openModal(id){
+  document.getElementById(id).style.display="block";
+}
+function closeModal(id){
+  document.getElementById(id).style.display="none";
+}
+window.onclick = function(event){
+  const modals = document.getElementsByClassName("modal");
+  for(let m of modals){
+    if(event.target == m){ m.style.display="none"; }
+  }
+}
+</script>
 </body>
-</html>
-        
-      </p>
-  </body>
-</html>
+  </html>
